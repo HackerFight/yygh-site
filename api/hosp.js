@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 const api_name = `/api/hosp/hospital`
 
-
+//
 export default {
 
     getHospitalList(page, limit, searchObj) {
