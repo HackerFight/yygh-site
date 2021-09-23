@@ -267,9 +267,26 @@ export default {
     script.type = 'text/javascript'
     script.src = 'https://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js'
     document.body.appendChild(script)
+
+     // 微信登录回调处理
+    let self = this;
+    window["loginCallback"] = (name,token, openid) => {
+      self.loginCallback(name, token, openid);
+    }
   },
 
   methods: {
+    //微信回调
+    loginCallback(name, token, openid){
+        // 打开手机登录层，绑定手机号，改逻辑与手机登录一致
+        if(openid != '') {
+        this.userInfo.openid = openid
+        this.showLogin()
+      } else {
+        this.setCookies(name, token)
+      }
+    },
+
     // 绑定登录或获取验证码按钮
     btnClick() {
       // 判断是获取验证码还是登录
