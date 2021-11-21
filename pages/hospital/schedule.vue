@@ -87,7 +87,7 @@
                 上午号源
             </div>  
     
-            <div v-for="item in item in scheduleList" :key="item.id" v-if="item.workTime == 0">
+            <div v-for="item in scheduleList" :key="item.id" v-if="item.workTime == 0">
               <div class="list-item">
                 <div class="item-wrapper">
                   <div class="title-wrapper">
@@ -118,11 +118,11 @@
         
         <div class="mt60" v-if="tabShow">
           <div class="">
-              <div class="list-title">
-                  <div class="block"></div>
-              下午号原
-              </div>
-            <div v-for="item in item in scheduleList" :key="item.id" v-if="item.workTime == 1">
+            <div class="list-title">
+                <div class="block"></div>
+                下午号源2
+            </div>
+            <div v-for="item in  scheduleList" :key="item.id" v-if="item.workTime == 1">
               <div class="list-item">
                 <div class="item-wrapper">
                   <div class="title-wrapper">
@@ -225,7 +225,7 @@ export default {
 
     findScheduleList() {
       hospitalApi.findScheduleList(this.hoscode, this.depcode, this.workDate).then(response => {
-        this.scheduleList = response.data
+        this.scheduleList = response.data
       })
     },
 
@@ -325,7 +325,6 @@ export default {
     },
 
     booking(scheduleId, availableNumber) {
-      debugger
       if(availableNumber == 0 || this.pageFirstStatus == -1) {
         this.$message.error('不能预约')
       } else {

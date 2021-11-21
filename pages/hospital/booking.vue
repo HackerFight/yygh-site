@@ -107,12 +107,12 @@
                 </el-form-item>  
               
                 <el-form-item label="就诊医院：">
-                    <div class="content"><span>{{ schedule.param.hosname }}</span></div>
+                    <div class="content"><span>{{ schedule.param.hosName }}</span></div>
                 </el-form-item>
                 
 
                 <el-form-item label="就诊科室：">
-                    <div class="content"><sapn>{{ schedule.param.depname }}</sapn></div>
+                    <div class="content"><sapn>{{ schedule.param.depName }}</sapn></div>
                 </el-form-item>
 
                 <el-form-item label="医生姓名：">
@@ -140,8 +140,7 @@
             <!-- 用户信息 #start-->
             <div>
               <div class="sub-title">
-                 <div class="block"></div> 
-                用户信息
+                 <div class="block"></div>用户信息
               </div>
               <div class="content-wrapper">
                  <el-form ref="form" :model="form">
