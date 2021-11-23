@@ -175,6 +175,7 @@ import '~/assets/css/hospital.css'
 
 import hospitalApi from '@/api/hosp'
 import patientApi from '@/api/patient'
+import orderApi from '@/api/order'
 
 export default {
 
@@ -226,7 +227,20 @@ export default {
     },
 
     submitOrder() {
-      
+        if(this.submitBnt == '正在提交'){
+           this.$message.error('不能重复提交')
+           return
+        }
+
+        this.submitBnt = '正在提交'
+        orderApi.submitOrder(this.scheduleId, this.patient.id)
+                .then(response => {
+             let orderId = response.data
+             window.location.href = '/order/show?orderId=' + orderId;
+         }).catch(e => {
+             this.submitBnt = '确认挂号'
+             console.log(e)
+         })
     },
 
     addPatient() {
