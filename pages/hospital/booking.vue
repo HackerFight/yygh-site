@@ -249,36 +249,38 @@ export default {
   }
 }
 </script>
-<!--
 <style>
-  .hospital-order .header-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: block !important;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-  .hospital-order .sub-title {
-    letter-spacing: 1px;
-    color: #999;
-    margin-top: 60px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-  .hospital-order .content-wrapper .content {
-    color: #333;
-  }
-  .el-form-item {
-    margin-bottom: 5px;
-  }
-  .hospital-order .content-wrapper {
-    margin-left: 140px;
-    margin-top: 20px;
-  }
+    .hospital-order .header-wrapper{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: block !important;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .hospital-order .sub-title {
+       letter-spacing: 1px;
+       color: #999;
+       margin-top: 60px;
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+    }
+
+    .hospital-order .content-wrapper .content {
+      color: #333;
+    }
+
+    .el-form-item {
+      margin-bottom: 5px;
+    }
+
+    .hospital-order .content-wrapper {
+      margin-left: 140px;
+      margin-top: 20px;
+    }
 </style>
--->

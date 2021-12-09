@@ -225,6 +225,7 @@ export default {
 
     findScheduleList() {
       hospitalApi.findScheduleList(this.hoscode, this.depcode, this.workDate).then(response => {
+        console.log(response.data);
         this.scheduleList = response.data
       })
     },
@@ -328,6 +329,7 @@ export default {
       if(availableNumber == 0 || this.pageFirstStatus == -1) {
         this.$message.error('不能预约')
       } else {
+        alert('getSchedule: ' + scheduleId);
         window.location.href = '/hospital/booking?scheduleId=' + scheduleId
       }
     }
