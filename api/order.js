@@ -34,5 +34,12 @@ export default {
           url: `${api_name}/auth/getStatusList`,
           method: 'get'
         })
-    }
+    },
+
+    cancelOrder(orderId) {
+         return request({
+              url: `${api_name}/auth/cancelOrder/${orderId}`,
+              method: 'get'
+         })
+    }
 }
